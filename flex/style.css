@@ -1,0 +1,31 @@
+.container{ display: flex;
+    
+    margin: 3em;
+    height: 300px;
+    justify-content: space-around;
+    transition:1s ease-in;
+    background: linear-gradient(100deg,rgba(232, 104, 104, 1 ) 0%, rgba(104, 232, 196, 1) 50%, rgba(239, 223, 97, 1) 100%);
+}
+.container:hover{
+    background-color: (rgba(232, 104, 104, 1));
+}
+
+.container div{
+    background-color: blanchedalmond;
+    height:50px;
+    width: 50px;
+    align-self: center;
+    border-radius: 50%;
+    
+
+}
+
+
+@media only screen and (max-width:1000px) and (orientation:portrait){
+    .container{
+        flex-direction: column;
+        height: 750px;
+        
+    }
+    
+}
