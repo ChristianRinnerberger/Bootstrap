@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="js" href="js.js">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    
+    <header class="header">
+        <h1 id="headline"></h1>
+    </header>
+            <script>
+                $('#headline')[0].innerHTML = 'Überschrift';
+            </script>
+        
+    <main class="main">
+        <p></p>
+        <p class="sec"></p>
+        <p></p>
+    </main>
+            <script>
+                $('p').html(' RandomTextIDKWhatToSaySoThisIsPretty<strong>RandomIK</strong>');
+            </script>
+    
+    <div class="button">
+        <button type="button" onclick="show()">Button</button>
+        <input type="Text"value="Textfeld" id="myInput">
+    </div>
+<script>
+    $(document).ready(function(){
+       $('.button').click(function(){
+           var inputvalue=$('#myInput').val();
+           $('p.sec').html(inputvalue);
+       });
+    });
+</script>
+
+
+
+
+
+
+
+<div class="contain">
+    <div class="BOX1">Box1</div>
+    <div class="BOX2">Box2</div>
+    <div class="BOX3">Box3</div>
+</div>
+<script>
+    $(document).ready(function(){
+    $(".contain .BOX1").contextmenu(function(){
+        $(this).animate({
+            height:'50',
+            width: '50',
+            opacity:'0.5'
+        });
+        alert("contextmenu");
+    });
+});
+</script>
+<script>
+    $(document).ready(function(){
+    $(".contain .BOX2").mousedown(function(){
+        $(this).animate({
+          margin:'3em' 
+        });
+        alert("mousedown");
+    });
+});
+</script>
+<script>
+    $(document).ready(function(){
+    $(".contain .BOX3").dblclick(function(){
+        $(this).animate({
+            padding:'150px',
+            opacity:'0.5'
+            
+        });
+        alert("dblclick");
+    });
+});
+</script>
+<div class="box">
+    <div class="contain2">   
+        <div class="BOX4">Box4</div>
+    </div>
+    <div class="button1">
+        <button type="button" >SWITCH</button>
+    </div>
+    <div class="contain1">  
+        <div class="BOX5">Box5</div>
+    </div>
+</div>
+
+
+<script>
+    $(document).ready(function(){
+        $('.contain1').hide()
+    })
+    $(document).ready(function(){
+        $('.button1 button').on('click',function(){
+        $('.contain1').toggle('slow');
+        $('.contain2').toggle('slow');
+    });
+});
+
+ </script>
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="js.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap" rel="stylesheet"> 
+    <title>Document</title>
+</head>
+<body id="body">
+<div class="box1">
+    <div class="box">
+        <div class="WinLose"> 
+            <h1 id="ChatMessage">Wanna play Rock, Scissors, Paper???</h1>
+            <h2 id="WinMessage">YOU: 0 Wins</h2>
+            <h3 >VS</h3>
+            <h2 id="LoseMessage">Computer: 0 Wins</h2>
+
+        </div> 
+       
+        <div class="button">
+            <div class="box-1">
+                <div class="btn-one" onclick="clickscissors()">
+                    <span>Scissors</span>
+                    <span class="material-icons">content_cut</span>
+                    
+                </div>
+              </div>
+            
+              <div class="box-1">
+                <div class="btn-one" onclick="clickstone()">
+                    <span>Stone</span>
+                    <span class="material-icons">
+                        landscape
+                        </span>
+                    
+                </div>
+              </div>
+              <div class="box-1">
+                <div class="btn-one" onclick="clickpaper()">
+                    <span>Paper</span>
+                    <span class="material-icons">
+                        send
+                        </span>
+                </div>
+              </div>
+        </div>
+           
+            <div class="box-1">
+                <div id="bt1" class="btn-one" onclick="restartButton()">
+                    <span>Reset</span>
+                    <span class="material-icons">
+                        replay
+                        </span>
+                </div>
+            </div>
+</div> 
+</body>
+</html>

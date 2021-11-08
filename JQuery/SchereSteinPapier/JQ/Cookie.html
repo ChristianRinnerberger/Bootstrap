@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies</title>
+</head>
+<body onload="checkCookie()">
+    <button type="button" onclick="setCookie('anwender', '' , -1)">Cookie löschen</button>
+
+<script>
+    function setCookie(cookieName,inhalt, dauer){
+        let datum = new Date();
+        datum.selfTime(datum.getTime()+(dauer*24*60*60*1000));
+        let ablaufdatum = "expires= "+datum.toGMTString();
+        document.cookie = cookieName + "=" + inhalt + ";" + ablaufdatum;
+    }
+
+</script>
+<script>
+       
+        function getCookie(cookieName){
+            cookiename += "=";
+            let decCookie = decodeURIComponent(document.cookie);
+            let arr = decCookie.split(';');
+
+    for(let i = 0; i < arr.length; i++){
+        let inhalt = arr[1];
+            while(inhalt.charAT(0) == ' '){
+                inhalt = inhalt.substring(1);
+            };
+            if(inhalt.indexOf(cookieName) == 0){
+                return inhalt.substring(cookieName.length);
+                }
+            }
+            return " ";
+        }
+
+        function checkCookie(){
+            let anwender = getCookie("anwender");
+            if (anwender != ""){
+                alert("hallo" + anwender + "!");
+            }else{
+                anwender= prompt("Gib deinen Namen ein:");
+                alert("Hallo" + anwender + "!");
+                if(anwender != "" && anwender != null){
+                    getCookie ("anwender",anwender,180);
+                }
+            }
+        }
+</script>    
+
+
+
+
+
+<script>
+    const customerData = [  { cnumber: "17844", lastname: "Maier", firstname: "Laura", favColor: "red" },
+                            { cnumber: "17845", lastname: "Huber", firstname: "Franz", favColor: "blue" }];
+                        
+        $(document).ready(function(){
+        function getCookie(cookieName){
+            cookiename += "=";
+            let decCookie = decodeURIComponent(document.cookie);
+            let arr = decCookie.split(';');
+
+    for(let i = 0; i < arr.length; i++){
+        while(inhalt.charAT(0) == ' '){
+            inhalt = inhalt.substring(1);
+            return inhalt.substring(cookieName.length);
+        };
+    };
+    return " ";
+};
+});
+</script>    
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</body>
+</html>

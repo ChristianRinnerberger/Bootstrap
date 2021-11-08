@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JQuery</title>
+</head>
+
+<body>
+    
+
+<div class="co">
+    <button id="btn1" onclick="fadeToggle()" type="button">Verstecken</button>
+    <button id="btn2" onclick="toggle()" type="button">Zeigen</button>
+    <button id="btn3" onclick="slideToggle()" type="button">Toggle</button>
+</div>
+<div class="cont">
+    <div id="rechteck1" style="background: #ee9900; height: 200px; width: 200px;"></div>
+    <div id="rechteck2" style="background: #89eb09; height: 200px; width: 200px;"></div>
+    <div id="rechteck3" style="background: #0dc6f5; height: 200px; width: 200px;"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+function fadeToggle() {
+$('#rechteck1').fadeToggle();
+}
+function toggle() {
+$('#rechteck2').toggle("fast");
+}
+function slideToggle() {
+$('#rechteck3').slideToggle("slow");
+}
+</script>
+</body>
+</html>
