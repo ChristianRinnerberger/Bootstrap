@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet"> 
+    <title>Japan</title>
+</head>
+<body>
+ <div class="container"></div>   
+    <header>
+        <div class="img">  
+            <h1>Welcome to Japan</h1>  
+                <nav class="nav">
+                    <button class="navbutton" aria-expanded="false" aria-controls="navi-liste">
+                        ☰ 
+                    </button>
+                        <ul id="navi-liste">
+                            <li><a href="index.html" class="link"><span>Home</span></a></li>
+                            <li><a href="second.html"class="link"><span>Galerie</span></a></li>
+                            <li><a href="contact.html"class="link"><span>Contact</span></a></li>
+                            <li><a href="third.html"class="link"><span>IDK</span></a></li>
+                        </ul>
+                </nav>
+        </div>
+    </header>
+
+    <main class="artikel">
+        <section class="inhalt">
+            <img src="pic1.jpg" alt=" " height="400" width="400">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Deleniti, est sunt possimus vel blanditiis repudiandae consequuntur similique<br> cum quos fugiat voluptatum ipsum, atque officiis! Sapiente laudantium <br>temporibus expedita accusantium porro?
+                </p> 
+        </section>
+            <section>
+                <p class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.<br> Eos ullam est adipisci tempora natus corrupti<br> quis vitae tempore repellendus possimus magni<br> veniam eaque hic eveniet, consequuntur minima ipsam. <br>Sequi, impedit.
+                    Lorem, ipsum dolor sit amet consectetur<br>adipisicing elit. Earum sunt ipsam, nemo<br> eveniet quam illo sit voluptas provident reprehenderit<br> nulla similique rem rerum voluptates asperiores! <br>Odit tenetur veritatis veniam omnis.
+                <img src="china.png">
+                </p>
+            </section>
+        <section class="inhalt">
+            <img src="pic2.jpg" alt=" " height="400" width="400">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br>Ullam eius corrupti reiciendis corporis neque? Repellendus explicabo accusamus <br>consequuntur modi. Alias, distinctio quidem. Quod dicta debitis incidunt <br>laborum, laudantium itaque facilis.
+                </p> 
+        </section>
+    </main>
+    
+    <footer>
+        <div class="copy">
+            <p>
+                Copyrights<br>
+                2021
+            </p>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector('button[aria-expanded]');
+    
+        function klappNav({
+          target
+        }) {
+          const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+          hamburger.setAttribute('aria-expanded', !expanded);
+        }
+        hamburger.addEventListener('click', klappNav);
+      </script>
+</body>
+</html>
